@@ -15,7 +15,7 @@ public class App
         // Token Stored as a Environment Variable
         final String TOKEN = System.getenv("BoogalooToken");        
         JDA bot = new JDABuilder(TOKEN)
-            .addEventListener(new RoomHandler())
+            .addEventListener(new EventHandler())
             .build(); // Builds builder into a JDA
 
         // Wait for bot to ready
