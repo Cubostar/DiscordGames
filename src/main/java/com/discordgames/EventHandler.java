@@ -6,6 +6,7 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 public class EventHandler extends ListenerAdapter {
     // Group id of text channel group
     public static final String PLAYING_GROUP_ID = "550014421460713488";
+    
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
