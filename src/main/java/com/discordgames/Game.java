@@ -18,4 +18,7 @@ public class Game {
         manager = new RoomManager(r1);
         manager.add(r2);
     }
+    public RoomManager getManager() {
+        return manager;
+    }
 }

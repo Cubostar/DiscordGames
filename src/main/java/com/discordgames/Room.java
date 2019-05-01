@@ -4,29 +4,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Room {
-    List<Puzzle> puzzles;
+    private List<Puzzle> puzzles;
+    private String name;
 
     // Lots of constructors
-    public Room(List<Puzzle> puzzles) {
+    public Room(String name, List<Puzzle> puzzles) {
+        this.name = name;
         this.puzzles = puzzles;
     }
 
     // Puzzle Array Room
-    public Room(Puzzle[] puzzles) {
+    public Room(String name, Puzzle[] puzzles) {
+        this.name = name;
         this.puzzles = new ArrayList<Puzzle>(puzzles.length);
         for (Puzzle puzzle : puzzles)
             addPuzzle(puzzle);
     }
 
     // No puzzle Room
-    public Room() {
+    public Room(String name) {
         this.puzzles = new ArrayList<Puzzle>(1);
     }
 
     // Single Puzzle Room
-    public Room(Puzzle puzzle) {
-        this();
+    public Room(String name, Puzzle puzzle) {
+        this(name);
         addPuzzle(puzzle);
+    }
+
+    public String getName() {
+        return name;
     }
 
     // Adds a puzzle to Room
